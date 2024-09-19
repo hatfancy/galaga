@@ -1,0 +1,69 @@
+import pgzrun
+import random
+from random import randint
+
+
+WIDTH = 1200
+HEIGHT = 600
+
+
+bug =Actor("bug")
+bug.pos = 50,50
+
+ship = Actor("ship")
+ship.pos =100,150
+
+bullet = Actor("bullet")
+bullet.pos = 150,100
+
+bugs = []
+next_bug = 0
+
+
+
+number_of_bug = 9
+
+def make_bug():
+   
+   for count in range(0, number_of_bug):
+     bug = Actor("bug")
+     bug.pos = randint(40, WIDTH-40), randint (40, HEIGHT-40),
+     bugs.append(bug)
+
+def draw():
+ screen.fill(color="blue")
+ number = 1 
+ for bug in bugs:
+    screen.draw.text(str(number),(bug.pos[0], bug.pos[1]+20))
+    bug.draw()
+    number = number + 1
+
+    
+    
+    
+ 
+
+
+
+
+
+#crate 8 bugs
+
+
+
+
+
+
+make_bug()
+
+
+
+
+
+
+
+
+
+
+
+pgzrun.go()
